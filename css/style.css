@@ -5,7 +5,7 @@
 
 :root {
   --white: #FFFFFF;
-  --off-white: #F8F5F0;
+  --off-white: #FFF5EC;
   --black: #111111;
   --dark: #1A1A1A;
   --orange: #E8762D;
@@ -103,13 +103,13 @@ ul { list-style: none; }
 
 /* --- Press Strip --- */
 .press-strip {
-  background: var(--black); color: #fff;
+  background: var(--orange); color: #fff;
   text-align: center; padding: var(--space-4) var(--space-3);
 }
 .press-strip .label {
   font-family: var(--font-mono); font-size: 10px;
   text-transform: uppercase; letter-spacing: 0.2em;
-  color: var(--orange); display: block; margin-bottom: var(--space-1);
+  color: rgba(255,255,255,0.6); display: block; margin-bottom: var(--space-1);
 }
 .press-strip .headline {
   font-family: var(--font-display);
@@ -124,7 +124,7 @@ ul { list-style: none; }
 }
 
 /* --- Intro --- */
-.intro { padding: var(--space-7) var(--space-4); background: var(--white); }
+.intro { padding: var(--space-7) var(--space-4); background: var(--off-white); }
 .intro-inner { max-width: var(--max-w); margin: 0 auto; }
 .intro-label {
   font-family: var(--font-mono); font-size: 10px;
@@ -172,7 +172,7 @@ ul { list-style: none; }
 }
 
 /* --- Story --- */
-.story { padding: var(--space-7) var(--space-4); background: var(--white); }
+.story { padding: var(--space-7) var(--space-4); background: var(--off-white); }
 .story-grid {
   max-width: var(--max-w); margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
@@ -234,7 +234,7 @@ ul { list-style: none; }
 .award-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.25); }
 
 /* --- Google Reviews --- */
-.reviews { padding: var(--space-7) var(--space-4); background: var(--off-white); }
+.reviews { padding: var(--space-7) var(--space-4); background: var(--white); }
 .reviews-inner { max-width: var(--max-w); margin: 0 auto; }
 .reviews-title {
   font-family: var(--font-body); font-size: clamp(26px, 3vw, 38px);
