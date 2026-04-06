@@ -34,20 +34,24 @@ a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: auto; object-fit: cover; }
 ul { list-style: none; }
 
-/* --- Banner --- */
+/* --- Banner (floating pill) --- */
 .concept-banner {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: var(--orange); color: #fff; text-align: center;
-  font-family: var(--font-mono); font-size: 10px;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  height: 28px; line-height: 28px; white-space: nowrap;
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(26,18,16,0.85); backdrop-filter: blur(12px);
+  color: var(--text-dim); text-align: center;
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 8px 20px; border-radius: 100px; white-space: nowrap;
+  border: 1px solid rgba(232,118,45,0.15);
 }
-.concept-banner .sep { margin: 0 8px; opacity: 0.4; }
-.concept-banner .soft { opacity: 0.6; }
+.concept-banner strong { color: var(--orange); }
+.concept-banner .sep { margin: 0 6px; opacity: 0.3; }
+.concept-banner .soft { display: none; }
 
 /* --- Nav --- */
 .nav {
-  position: sticky; top: 28px; z-index: 900;
+  position: sticky; top: 0; z-index: 900;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 32px; height: 60px;
   background: rgba(26,18,16,0.95); backdrop-filter: blur(20px);
@@ -347,7 +351,7 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 .img-placeholder.loaded { border: none; }
 
 /* --- Subpages --- */
-.page-header { padding: calc(28px + 60px + 64px) 32px 48px; text-align: center; }
+.page-header { padding: calc(60px + 64px) 32px 48px; text-align: center; }
 .page-header h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; margin-bottom: 10px; letter-spacing: -0.02em; }
 .page-header .subtitle { font-size: 16px; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
 .menu-full {
