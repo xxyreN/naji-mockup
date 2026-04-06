@@ -38,17 +38,19 @@ a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: auto; }
 ul { list-style: none; }
 
-/* --- Sticky header wrapper --- */
-.sticky-header {
-  position: sticky; top: 0; z-index: 900;
-}
-/* --- Banner (below nav) --- */
+/* --- Banner (fixed at very top) --- */
 .concept-banner {
-  position: relative; z-index: 800;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: #8B2020; color: #fff; text-align: center;
   font-family: var(--font-mono); font-size: 10px;
   letter-spacing: 0.18em; text-transform: uppercase;
   height: 28px; line-height: 28px; white-space: nowrap;
+}
+/* --- Spacer to offset fixed banner --- */
+.banner-spacer { height: 28px; }
+/* --- Nav (sticky below banner) --- */
+.nav-wrap {
+  position: sticky; top: 28px; z-index: 900;
 }
 .concept-banner .sep { margin: 0 8px; opacity: 0.4; }
 .concept-banner .soft { opacity: 0.6; }
