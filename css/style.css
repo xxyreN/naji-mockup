@@ -98,13 +98,15 @@ ul { list-style: none; }
   padding: 80px 48px; max-width: var(--max-w); margin: 0 auto;
 }
 .hero-caption { max-width: 560px; }
-.hero-caption .mono {
-  display: inline-block;
-  font-family: var(--font-naji); font-size: 13px; font-weight: 600;
-  letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--orange); margin-bottom: 16px;
-  background: rgba(0,0,0,0.55); padding: 6px 16px; border-radius: 4px;
+/* Hero side label (vertical) */
+.hero-side-label {
+  position: absolute; right: 48px; bottom: 80px; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  font-family: var(--font-naji); font-size: 11px; font-weight: 300;
+  letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5);
+  writing-mode: vertical-rl;
 }
+.hero-side-line { display: block; width: 1px; height: 40px; background: rgba(232,118,45,0.4); }
 .hero-caption .title {
   font-family: var(--font); font-size: clamp(42px, 6vw, 68px);
   font-weight: 800; line-height: 1.02; color: var(--white);
@@ -143,6 +145,13 @@ ul { list-style: none; }
   text-transform: uppercase; letter-spacing: 0.2em;
   color: var(--orange); margin-bottom: 16px;
 }
+.intro-address {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font); font-size: 13px; font-weight: 400;
+  color: var(--text-dim); margin-bottom: 20px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.intro-address svg { color: var(--orange); flex-shrink: 0; }
 .intro-statement {
   font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
   line-height: 1.25; max-width: 640px; letter-spacing: -0.02em;
