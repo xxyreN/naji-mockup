@@ -45,25 +45,35 @@ ul { list-style: none; }
 .concept-banner .sep { margin: 0 8px; opacity: 0.4; }
 .concept-banner .soft { opacity: 0.6; }
 
-/* --- Nav --- */
+/* --- Nav (centered stacked) --- */
 .nav {
   position: sticky; top: 28px; z-index: 900;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 32px; height: 60px;
-  background: var(--bg); border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center;
+  padding: 20px 32px 0;
+  background: var(--bg);
 }
-.nav-logo img { height: 20px; width: auto; }
-.nav-right { display: flex; align-items: center; gap: 28px; }
-.nav-links { display: flex; gap: 24px; }
-.nav-links a { font-size: 13px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+.nav-logo img { height: 22px; width: auto; }
+.nav-bottom {
+  display: flex; align-items: center; gap: 32px;
+  margin-top: 14px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border); width: 100%; justify-content: center;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-dim); transition: color 0.2s;
+}
 .nav-links a:hover { color: var(--white); }
+.nav-divider { width: 1px; height: 14px; background: var(--border); }
 .lang-toggle { display: flex; align-items: center; gap: 6px; }
 .lang-toggle button {
   background: none; border: none; color: var(--text-dim);
-  font-family: var(--font-mono); font-size: 11px; cursor: pointer; padding: 0;
+  font-family: var(--font-mono); font-size: 10px; cursor: pointer; padding: 0;
+  letter-spacing: 0.1em;
 }
 .lang-toggle button.active { color: var(--orange); }
-.lang-toggle .sep { color: #333; font-size: 11px; }
+.lang-toggle .sep { color: #333; font-size: 10px; }
 
 /* --- Hero --- */
 .hero {
@@ -420,6 +430,8 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-divider { display: none; }
+  .nav-bottom { margin-top: 0; padding-bottom: 12px; }
   .hero { min-height: 500px; }
   .signature-grid { grid-template-columns: 1fr; }
   .story-grid { grid-template-columns: 1fr; gap: 32px; }
