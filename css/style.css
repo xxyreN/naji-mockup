@@ -99,10 +99,11 @@ ul { list-style: none; }
 }
 .hero-caption { max-width: 560px; }
 .hero-caption .mono {
+  display: inline-block;
   font-family: var(--font-naji); font-size: 13px; font-weight: 600;
   letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--bg); margin-bottom: 12px;
-  text-shadow: 0 0 12px rgba(255,255,255,0.4), 0 0 24px rgba(255,255,255,0.2);
+  color: var(--orange); margin-bottom: 16px;
+  background: rgba(0,0,0,0.55); padding: 6px 16px; border-radius: 4px;
 }
 .hero-caption .title {
   font-family: var(--font); font-size: clamp(42px, 6vw, 68px);
