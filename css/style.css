@@ -439,7 +439,7 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
   transition: border-color 0.3s, transform 0.3s;
 }
 .menu-card:hover { border-color: var(--orange); transform: translateY(-3px); }
-.menu-card-img { aspect-ratio: 4/3; overflow: hidden; }
+.menu-card-img { aspect-ratio: 1; overflow: hidden; }
 .menu-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
 .menu-card:hover .menu-card-img img { transform: scale(1.05); }
 .menu-card-body { padding: 16px; }
