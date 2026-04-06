@@ -350,7 +350,27 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 .page-header { padding: calc(28px + 60px + 64px) 32px 48px; text-align: center; }
 .page-header h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; margin-bottom: 10px; letter-spacing: -0.02em; }
 .page-header .subtitle { font-size: 16px; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
-.menu-full { max-width: var(--max-w); margin: 0 auto; padding: 0 32px 96px; }
+.menu-full {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 32px 96px;
+  position: relative;
+}
+.menu-full::before,
+.menu-full::after {
+  content: ''; position: fixed; top: 50%; width: 1px; height: 40vh;
+  transform: translateY(-50%);
+  background: linear-gradient(to bottom, transparent, var(--orange) 30%, var(--orange) 70%, transparent);
+  opacity: 0.15; pointer-events: none;
+}
+.menu-full::before { left: clamp(12px, 3vw, 40px); }
+.menu-full::after { right: clamp(12px, 3vw, 40px); }
+/* Small diamond accents on the lines */
+.menu-section { position: relative; }
+.menu-section + .menu-section::after {
+  content: '·  ·  ·'; position: absolute; top: -32px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono); font-size: 14px;
+  color: var(--orange); opacity: 0.3; letter-spacing: 0.3em;
+}
 .menu-section { margin-bottom: 64px; }
 .menu-section h2 {
   font-size: 26px; font-weight: 700; margin-bottom: 12px; padding-bottom: 12px;
