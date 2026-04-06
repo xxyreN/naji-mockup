@@ -346,15 +346,6 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
   display: inline-block; margin-top: 6px; font-size: 10px;
   color: var(--text-dim); letter-spacing: 0.15em;
 }
-/* Hero-specific placeholder */
-.hero-ph {
-  position: absolute; inset: 0; z-index: 3;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange);
-  line-height: 1.8; border: 2px dashed rgba(232,118,45,0.25);
-}
-.hero-ph strong { font-size: 13px; color: var(--text); text-transform: none; letter-spacing: 0.05em; }
 /* Hide placeholder label when image loads */
 .img-placeholder.loaded .ph-label { display: none; }
 .img-placeholder.loaded { border: none; }
