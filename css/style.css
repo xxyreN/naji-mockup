@@ -318,7 +318,14 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 .page-header .subtitle { font-size: 16px; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
 .menu-full { max-width: var(--max-w); margin: 0 auto; padding: 0 32px 96px; }
 .menu-section { margin-bottom: 64px; }
-.menu-section h2 { font-size: 26px; font-weight: 700; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.menu-section h2 {
+  font-size: 26px; font-weight: 700; margin-bottom: 12px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border); position: relative; padding-left: 20px;
+}
+.menu-section h2::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 3px; height: 20px; background: var(--orange); border-radius: 2px;
+}
 .menu-section .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; }
 .menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--border); }
 .menu-item:last-child { border-bottom: none; }
