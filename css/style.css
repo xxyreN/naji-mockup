@@ -56,13 +56,13 @@ ul { list-style: none; }
 /* --- Nav (centered stacked) --- */
 .nav {
   display: flex; flex-direction: column; align-items: center;
-  padding: 20px 32px 0;
+  padding: 28px 32px 0;
   background: var(--bg);
 }
-.nav-logo img { height: 22px; width: auto; }
+.nav-logo img { height: 26px; width: auto; }
 .nav-bottom {
   display: flex; align-items: center; gap: 32px;
-  margin-top: 14px; padding-bottom: 16px;
+  margin-top: 18px; padding-bottom: 20px;
   border-bottom: 1px solid var(--border); width: 100%; justify-content: center;
 }
 .nav-links { display: flex; gap: 28px; }
