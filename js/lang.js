@@ -24,8 +24,15 @@
     });
   });
 
-  // Image fallback — show filename overlay when image fails to load
+  // Image load — hide placeholder labels when image loads successfully
   document.querySelectorAll('img[src*="img/"]').forEach(function (img) {
+    img.addEventListener('load', function () {
+      var ph = this.parentNode.querySelector('.ph-label, .hero-ph');
+      if (ph) ph.style.display = 'none';
+      if (this.parentNode.classList.contains('img-placeholder')) {
+        this.parentNode.style.border = 'none';
+      }
+    });
     img.addEventListener('error', function () {
       var filename = this.src.split('/').pop();
       var parent = this.parentNode;
