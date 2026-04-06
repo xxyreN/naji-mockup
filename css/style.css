@@ -16,6 +16,7 @@
 
   --font: 'Inter', -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
+  --font-naji: 'Josefin Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --max-w: 1100px;
@@ -63,8 +64,8 @@ ul { list-style: none; }
 }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a {
-  font-family: var(--font-mono); font-size: 10px; font-weight: 500;
-  letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: var(--font-naji); font-size: 12px; font-weight: 300;
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--text-dim); transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
@@ -96,8 +97,8 @@ ul { list-style: none; }
 }
 .hero-caption { max-width: 560px; }
 .hero-caption .mono {
-  font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: var(--font-naji); font-size: 13px; font-weight: 300;
+  letter-spacing: 0.25em; text-transform: uppercase;
   color: var(--orange); margin-bottom: 12px;
 }
 .hero-caption .title {
@@ -117,8 +118,8 @@ ul { list-style: none; }
   border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
 }
 .press-strip .label {
-  font-family: var(--font-mono); font-size: 10px;
-  text-transform: uppercase; letter-spacing: 0.2em;
+  font-family: var(--font-naji); font-size: 12px; font-weight: 300;
+  text-transform: uppercase; letter-spacing: 0.25em;
   color: var(--orange); margin-bottom: 4px;
 }
 .press-strip .headline {
@@ -150,8 +151,8 @@ ul { list-style: none; }
 
 /* --- Section helpers --- */
 .section-label {
-  font-family: var(--font-mono); font-size: 10px;
-  text-transform: uppercase; letter-spacing: 0.2em;
+  font-family: var(--font-naji); font-size: 12px; font-weight: 300;
+  text-transform: uppercase; letter-spacing: 0.25em;
   color: var(--orange); display: block; margin-bottom: 10px;
 }
 .display-m {
@@ -293,7 +294,7 @@ ul { list-style: none; }
   max-width: var(--max-w); margin: 0 auto 40px;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
 }
-.footer .wordmark { font-family: 'Arial Black', Impact, sans-serif; font-size: 28px; font-weight: 900; margin-bottom: 6px; }
+.footer .wordmark { font-family: var(--font-naji); font-size: 28px; font-weight: 300; letter-spacing: 0.2em; margin-bottom: 6px; text-transform: uppercase; }
 .footer .tagline-footer { color: var(--text-dim); font-size: 14px; max-width: 280px; }
 .footer h4 {
   font-family: var(--font-mono); font-size: 10px; text-transform: uppercase;
@@ -361,7 +362,7 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 
 /* --- Subpages --- */
 .page-header { padding: calc(28px + 60px + 64px) 32px 48px; text-align: center; }
-.page-header h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; margin-bottom: 10px; letter-spacing: -0.02em; }
+.page-header h1 { font-family: var(--font-naji); font-size: clamp(32px, 4vw, 48px); font-weight: 300; margin-bottom: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
 .page-header .subtitle { font-size: 16px; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
 .menu-full {
   max-width: var(--max-w); margin: 0 auto; padding: 0 32px 96px;
