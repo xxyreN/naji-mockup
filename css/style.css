@@ -26,15 +26,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
-/* --- Decorative horizontal lines --- */
-body::before {
-  content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  pointer-events: none; z-index: 0;
-  background:
-    linear-gradient(to right, transparent 20%, rgba(232,118,45,0.06) 20%, rgba(232,118,45,0.06) 20.5%, transparent 20.5%),
-    linear-gradient(to right, transparent 50%, rgba(232,118,45,0.04) 50%, rgba(232,118,45,0.04) 50.3%, transparent 50.3%),
-    linear-gradient(to right, transparent 80%, rgba(232,118,45,0.06) 80%, rgba(232,118,45,0.06) 80.5%, transparent 80.5%);
-}
 
 body {
   font-family: var(--font); background: var(--bg); color: var(--text);
@@ -158,6 +149,16 @@ ul { list-style: none; }
 .intro-statement em {
   font-style: italic; font-family: var(--font-display);
   font-weight: 400; color: var(--orange);
+}
+
+/* --- Section divider lines --- */
+.section-lines {
+  padding: 24px 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.section-lines span {
+  display: block; height: 1px; width: 100%;
+  background: linear-gradient(to right, transparent, rgba(232,118,45,0.2) 20%, rgba(232,118,45,0.2) 80%, transparent);
 }
 
 /* --- Section helpers --- */
