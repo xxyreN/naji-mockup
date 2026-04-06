@@ -34,9 +34,9 @@ a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: auto; object-fit: cover; }
 ul { list-style: none; }
 
-/* --- Banner --- */
+/* --- Banner (below nav) --- */
 .concept-banner {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  position: relative; z-index: 800;
   background: #8B2020; color: #fff; text-align: center;
   font-family: var(--font-mono); font-size: 10px;
   letter-spacing: 0.18em; text-transform: uppercase;
@@ -47,7 +47,7 @@ ul { list-style: none; }
 
 /* --- Nav (centered stacked) --- */
 .nav {
-  position: sticky; top: 28px; z-index: 900;
+  position: sticky; top: 0; z-index: 900;
   display: flex; flex-direction: column; align-items: center;
   padding: 20px 32px 0;
   background: var(--bg);
