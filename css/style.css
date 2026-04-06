@@ -66,13 +66,13 @@ ul { list-style: none; }
 .nav-links a {
   font-family: var(--font-naji); font-size: 12px; font-weight: 300;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--text-dim); transition: color 0.2s;
+  color: #E8A96A; transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
 .nav-divider { width: 1px; height: 14px; background: var(--border); }
 .lang-toggle { display: flex; align-items: center; gap: 6px; }
 .lang-toggle button {
-  background: none; border: none; color: var(--text-dim);
+  background: none; border: none; color: #E8A96A;
   font-family: var(--font-mono); font-size: 10px; cursor: pointer; padding: 0;
   letter-spacing: 0.1em;
 }
