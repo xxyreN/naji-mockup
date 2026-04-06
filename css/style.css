@@ -56,13 +56,13 @@ ul { list-style: none; }
 /* --- Nav (centered stacked) --- */
 .nav {
   display: flex; flex-direction: column; align-items: center;
-  padding: 28px 32px 0;
+  padding: 36px 32px 0;
   background: var(--bg);
 }
-.nav-logo img { height: 26px; width: auto; }
+.nav-logo img { height: 30px; width: auto; }
 .nav-bottom {
   display: flex; align-items: center; gap: 32px;
-  margin-top: 18px; padding-bottom: 20px;
+  margin-top: 20px; padding-bottom: 28px;
   border-bottom: 1px solid var(--border); width: 100%; justify-content: center;
 }
 .nav-links { display: flex; gap: 28px; }
@@ -375,7 +375,7 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 .img-placeholder.loaded { border: none; }
 
 /* --- Subpages --- */
-.page-header { padding: calc(28px + 60px + 64px) 32px 48px; text-align: center; }
+.page-header { padding: 64px 32px 48px; text-align: center; }
 .page-header h1 { font-family: var(--font-naji); font-size: clamp(32px, 4vw, 48px); font-weight: 300; margin-bottom: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
 .page-header .subtitle { font-size: 16px; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
 .menu-full {
