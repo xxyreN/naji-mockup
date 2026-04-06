@@ -508,8 +508,13 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
   /* Sections */
   .intro { padding: 64px 20px; }
   .intro-statement { font-size: 26px; }
-  .signature { padding: 64px 20px; }
-  .signature-grid { grid-template-columns: 1fr; }
+  .signature { padding: 48px 12px; }
+  .signature-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .sig-card .body { padding: 10px; }
+  .sig-card h3 { font-size: 13px; }
+  .sig-card .desc { font-size: 10px; }
+  .sig-card .price { font-size: 10px; }
+  .display-m { font-size: 20px; }
   .story { padding: 64px 20px; }
   .story-grid { grid-template-columns: 1fr; gap: 32px; }
   .story-media { aspect-ratio: 16/9; }
@@ -519,12 +524,23 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .press-logos { flex-wrap: wrap; gap: 16px; }
 
-  /* Carta */
-  .menu-full { padding: 0 20px 64px; }
+  /* Carta — keep 3-col like desktop, just smaller */
+  .menu-full { padding: 0 12px 48px; }
   .menu-full::before, .menu-full::after { display: none; }
   .menu-section::before { display: none; }
-  .menu-section .menu-grid { grid-template-columns: 1fr; }
-  .menu-cards-grid { grid-template-columns: 1fr 1fr; }
+  .menu-section h2 { font-size: 18px; padding-left: 14px; }
+  .menu-section h2::before { height: 14px; top: 5px; }
+  .menu-section .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 0 16px; }
+  .menu-item .name { font-size: 11px; }
+  .menu-item .price-tag { font-size: 10px; }
+  .menu-cards-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .menu-card-body { padding: 8px; }
+  .menu-card-top h3 { font-size: 11px; }
+  .menu-card-top .price-tag { font-size: 10px; }
+  .menu-card-desc { font-size: 9px; }
+  .menu-note { font-size: 10px; }
+  .page-header h1 { font-size: 24px; }
+  .page-header .subtitle { font-size: 12px; }
   .visit-grid { grid-template-columns: 1fr; }
 
   /* Section lines */
@@ -532,6 +548,5 @@ img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
 }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
-  .menu-cards-grid { grid-template-columns: 1fr; }
   .hero-caption .title { font-size: 30px; }
 }
