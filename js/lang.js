@@ -24,6 +24,14 @@
     });
   });
 
+  // Nav scroll effect
+  var nav = document.querySelector('.nav');
+  if (nav) {
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+
   // Image load — hide placeholder labels when image loads successfully
   document.querySelectorAll('img[src*="img/"]').forEach(function (img) {
     img.addEventListener('load', function () {
