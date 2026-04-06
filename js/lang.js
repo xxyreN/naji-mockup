@@ -31,7 +31,7 @@
       var parent = this.parentNode;
       this.style.display = 'none';
       var placeholder = document.createElement('div');
-      placeholder.style.cssText = 'background:#F0EBE4;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:200px;font-family:monospace;font-size:12px;color:#E8762D;letter-spacing:0.05em;padding:20px;text-align:center;border:1px dashed rgba(232,118,45,0.2);border-radius:8px;position:absolute;inset:0;';
+      placeholder.style.cssText = 'background:#161616;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:200px;font-family:monospace;font-size:12px;color:#E8762D;letter-spacing:0.05em;padding:20px;text-align:center;border:1px dashed rgba(232,118,45,0.15);border-radius:16px;position:absolute;inset:0;';
       placeholder.textContent = filename;
       if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
       parent.appendChild(placeholder);
