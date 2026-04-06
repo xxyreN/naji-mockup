@@ -311,6 +311,26 @@ html.lang-en [data-es] { display: none; }
 
 /* --- Image fallback --- */
 img[src*="img/"] { background: var(--bg-card); min-height: 180px; }
+.img-placeholder {
+  position: relative; background: var(--bg-card); min-height: 280px;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px dashed rgba(232,118,45,0.25); border-radius: var(--r);
+}
+.img-placeholder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--r); }
+.img-placeholder .ph-label {
+  position: relative; z-index: 2; text-align: center; padding: 20px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--orange); line-height: 1.8;
+}
+.img-placeholder .ph-label strong { display: block; font-size: 13px; color: var(--text); margin-bottom: 4px; letter-spacing: 0.05em; text-transform: none; }
+.img-placeholder .ph-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%; background: var(--orange);
+  color: #fff; font-size: 12px; font-weight: 700; margin-bottom: 8px;
+}
+/* Hide placeholder label when image loads */
+.img-placeholder.loaded .ph-label { display: none; }
+.img-placeholder.loaded { border: none; }
 
 /* --- Subpages --- */
 .page-header { padding: calc(28px + 60px + 64px) 32px 48px; text-align: center; }
